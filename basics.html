@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Oreo 🐰</title>
+
+    <style>
+      body {
+        margin: 40px;
+        background: url(https://previews.123rf.com/images/zhevasylieva/zhevasylieva1511/zhevasylieva151100055/47852381-carrots-vector-seamless-pattern-with-cute-fruit-characters-on-dotted-background.jpg);
+      }
+
+      .page {
+        width: 80%;
+        margin: 30px auto;
+        background-color: rgba(255, 255, 255, 0.9);
+        padding: 30px;
+        border: 3px solid #fe8104;
+        border-radius: 10px;
+      }
+
+      .title {
+        text-align: center;
+        border: solid;
+        border-radius: 20px;
+        background-color: white;
+        padding: 20px 10px;
+        margin: 30px 70px;
+        border-color: #fe8104;
+      }
+
+      h1 {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 40px;
+        color: #99d704;
+      }
+
+      h2 {
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 10px;
+      }
+
+      hr {
+        height: 3px;
+        background: #fe8104;
+        border: white;
+      }
+
+      img {
+        display: block;
+        margin: 0 auto;
+        border: solid;
+        border-width: 5px;
+        color: #99d704;
+        border-radius: 10px;
+      }
+
+      .info {
+        border: solid;
+        border-color: #fe8104;
+        padding: 20px;
+        border-radius: 20px;
+        text-align: center;
+        background-color: white;
+        margin: 30px 70px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 18px;
+      }
+
+      button {
+        margin: 0 auto;
+        display: block;
+        background-color: #fff;
+        border: 3px solid #fe8104;
+        border-radius: 15px;
+        color: #99d704;
+        font-size: 25px;
+        padding: 16px 40px;
+        box-shadow: 1px 4px 4px #cbc6d1;
+        transition: all 200ms ease;
+        margin-bottom: 30px;
+      }
+
+      button:hover {
+        cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>🥕</text></svg>")
+            16 0,
+          auto;
+        color: #fe8104;
+        border: 3px solid #99d704;
+        transform: scale(1.2);
+      }
+
+      .footer {
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+      }
+
+      .name {
+        font-weight: bold;
+      }
+
+      .oreo {
+        width: 400px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <div class="title">
+        <h1>Oreo The Bunny 🐰</h1>
+      </div>
+
+      <h2>A rabbit influencer</h2>
+
+      <hr />
+
+      <img
+        class="oreo"
+        src="https://c.tenor.com/2rdf88YU5RoAAAAd/oreo-the-bunny-oreo.gif"
+        alt="Rabbit"
+      />
+      <hr />
+      <div class="info">
+        <p>
+          <strong> Oreo the bunny</strong> was born in 2015 in Spain and is
+          loved by over 11,000 followers on Facebook. His
+          <em>human slave</em> posts screenshots of Oreo's silly and demanding
+          text messages with her. Oreo loves to eat strawberries and destroy all
+          types of furniture. He's plotting to take over the world with his cute
+          little face!
+        </p>
+        <a href="https://www.facebook.com/oreobunny1" target="_blank">
+          <strong> Follow his adventures on Facebook</strong>
+        </a>
+        <br />
+      </div>
+
+      <button>Give Oreo a carrot!</button>
+
+      <div class="footer">
+        Coded by: <span class="name">Becca Ferguson 👩‍💻</span>
+      </div>
+    </div>
+
+    <script>
+      function carrot() {
+        let name = prompt("What is your first name?");
+        let give = confirm("Do you want to give Oreo a carrot?");
+        let h1 = document.querySelector("h1");
+
+        if (give) {
+          alert("Thank you " + name + "!");
+          h1.innerHTML = "Thank you for the carrot " + name + "! 🐰";
+          document.querySelector(".oreo").src =
+            "https://c.tenor.com/DWV05GFDpMcAAAAC/oreo-eat.gif";
+        } else {
+          alert("Why not " + name + "?");
+          h1.innerHTML = "Please give me a carrot " + name + "! 😭";
+          document.querySelector(".oreo").src =
+            "https://c.tenor.com/Ug2i2QRRBcsAAAAC/oreo-theb-bunny-oreo.gif";
+        }
+      }
+
+      let carrotButton = document.querySelector("button");
+
+      carrotButton.addEventListener("click", carrot);
+    </script>
+  </body>
+</html>
