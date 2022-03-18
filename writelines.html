@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Writing lines</title>
+  </head>
+
+  <style>
+    .board {
+      text-align: center;
+      background-color: green;
+      margin: 50px;
+      padding: 20px;
+      color: white;
+      font-family: Arial, Helvetica, sans-serif;
+      border: 10px solid rgb(112, 19, 19);
+    }
+  </style>
+  <body>
+    <button>Write lines</button>
+
+    <div class="board"></div>
+    <script>
+      function repeatPhrases() {
+        let phrase = prompt("Tell me a phrase");
+        let number = prompt("How many times do you want to repeat the phrase?");
+        let board = document.querySelector(".board");
+        for (let i = 0; i < number; i++) {
+          board.innerHTML += phrase + "<br />";
+        }
+      }
+
+      let startButton = document.querySelector("button");
+
+      startButton.addEventListener("click", repeatPhrases);
+    </script>
+  </body>
+</html>
